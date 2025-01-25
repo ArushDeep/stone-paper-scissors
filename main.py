@@ -8,11 +8,12 @@ def compChoice():
   return random.randrange(3)
 
 def playerChoice():
-  print("------------------------------------------")
-  print("0 --> Stone")
-  print("1 --> Paper")
-  print("2 --> Scissors")
-  n = int(input("Enter choice: "))
+  print("---------------------------------------")
+  print("Choose an option:")
+  print("0: Stone")
+  print("1: Paper")
+  print("2: Scissors")
+  n = int(input("\nEnter the number of your choice (0, 1, or 2): "))
 
   if n in [0,1,2]:
     return n
@@ -34,13 +35,15 @@ def getResult(comp,player):
   return l[comp][player]
 
 def printResult(res):
+  print()
+
   match res:
     case 'D':
-      print("Draw")
+      print("Match Draw!")
     case 'W':
-      print("Win")
+      print("You have Won!")
     case 'L':
-      print("Loss")
+      print("You have Lost!")
     case _:
       pass
   return
@@ -59,6 +62,6 @@ while True:
 
   ch = input("\nExit(y/)?: ")
   if ch == "y":
-    print("------------------------------------------")
+    print("---------------------------------------")
     break
-  print("------------------------------------------")
+  print("---------------------------------------")
